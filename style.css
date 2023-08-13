@@ -1,6 +1,7 @@
 html, body {
     height: 100vh;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 body {
@@ -29,15 +30,15 @@ body {
 .lace-pattern{
     border-top: 2px solid #4a473b;
 }
+
 .lace-pattern-inner{
-    background-color: transparent;
-    height:4px;
-    background-image: linear-gradient(to right, #4a473b 10px, transparent 10px, transparent 40px), url(lace.svg);
-    background-repeat: repeat-x;
-    background-size: 70px 100%; 
-    background-position: left;   
+    
+    display:block;
+    height: 30px;
+    background: url(lace.svg) repeat-x left top / 70px 30px, linear-gradient(to right, #4a473b 10px, transparent 10px, transparent 40px) repeat-x left top / 70px 4px;
     margin-left: 60px;
 }
+
 
 
 
