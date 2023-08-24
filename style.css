@@ -15,17 +15,15 @@ body {
     font-weight: lighter;  
     height: 100vh;
     letter-spacing: .1rem; 
-    
     /*
     background: url(nierautomata-map.jpg) no-repeat center center fixed;
     */
-    
     background-size: cover;
 }
 
 body::before{
-    position: absolute;
     content: "";
+    position: absolute;
     background-size: 5px 5px;
     background-image: linear-gradient(90deg, transparent, transparent 3px, rgba(143, 140, 119, 0.07) 4px), linear-gradient(transparent, transparent 3px, rgba(143, 140, 119, 0.07) 4px);
     pointer-events: none;
@@ -37,7 +35,7 @@ body::before{
     display:block;
     height: 40px;
     background: url(lace.svg) repeat-x left top / 70px 30px, linear-gradient(to right, #4a473b 10px, transparent 10px, transparent 40px) repeat-x left top / 70px 6px;
-    margin-left: 36px;
+    margin-left: 45px;
     
 }
 
@@ -52,44 +50,62 @@ body::before{
 
 }
 
-main{
-    height: 100%;
-    width: 93%;
-    margin: 0 40px;
-}
-
 nav {
     background-color: lightblue;
-    height: auto;
-    margin: 22px 40px 15px 55px;
+    height: 37px;
+    margin:5px 0 18px 90px;
     white-space:nowrap;
     overflow-x: scroll;
     scrollbar-width: none;
+
+    &::-webkit-scrollbar{
+        height: 0;
+    }
+
+    
 }
 
 nav a{    
     box-sizing: border-box;
     display: inline-block;
     background-color: #b1ad99;
-    width: 175px;
-    height: 45px;
-    margin: 0 0 0 25px;
+    width: 170px;
+    height: inherit;
     text-align: center;
     padding-top: 10px;
+
+    &:not(:last-child){
+        margin: 0 28px 0 0;
+    }
 }
 
-main h1{
+nav::before{
+    content: "";
+    position: absolute;
+    height: inherit;
+    width: 7px;
+    margin-left: -48px;
+    border: solid #b4ac9c;
+    border-width: 0 4px 0 10px;
+}
+
+header h1{
     display: inline-block;
     font-weight: normal;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     text-shadow: 0.3rem 0.3rem #a29f91;
     font-size:3rem;
-    margin: 0;
+    margin: 0 0 0 47px;
 
     &span {
         float:center
     }
+}
+
+main {
+    height: 70%;
+    margin: 0 47px 50px 47px;
 }
 
 
