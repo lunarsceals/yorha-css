@@ -1,103 +1,103 @@
 html, body {
+    box-sizing: border-box;
+    overflow: hidden;
     min-width: 100vw;
     min-height: 100vh;
+    padding: 0;
     margin: 0;
-    overflow: hidden;
-    
-}
-
-body {
-    display: flex;
-    flex-direction: column;
     background-color: #B9B59B;
     color: #403F35;
     font-family: Helvetica, sans-serif;
-    font-weight: normal;  
-    height: 100vh;
-    letter-spacing: 0.1rem; 
-}
-/*
-body::before{
-    content:" ";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background: url(nierautomata-map.jpg) no-repeat;
-    opacity: 0.2;
-}
-*/
-
-
-body::before{
-    content: "";
-    position: absolute;
-    background-size: 0.45rem 0.45rem;
-    background-image: conic-gradient(from 90deg at 2px 2px,
-    rgba(241, 235, 216, 0.062) 90deg,transparent 0);
-    pointer-events: none;
-    height: 100%;
-    width: 100%;
-    box-shadow: 1rem 0 8rem rgba(36, 36, 36, 0.712) inset;
-    z-index: 1;
+    font-weight: normal;
+    
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    border: solid red;
+    letter-spacing: 0.1rem;
 
-.primary-navigation{
-    white-space:nowrap;
-    padding: 1.4rem 0 0.5rem 5.1rem;
+    &::before{
+
+        content: "";
+        position: absolute;
+        background-size: 0.45rem 0.45rem;
+        background-image: conic-gradient(from 90deg at 2px 2px,
+        rgba(241, 235, 216, 0.062) 90deg,transparent 0);
+        pointer-events: none;
+        height: 100%;
+        width: 100%;
+        box-shadow: 1rem 0 8rem rgba(36, 36, 36, 0.712) inset;
+        z-index: 1;
+    }
+
 }
 
-.primary-navigation a{    
-    box-sizing: border-box;
-    display: inline-block;
-    background-color: #A7A187;
-    font-size: 2rem; 
-    padding: 0.25rem 0 0.25rem 3rem;
-    width: 13.3rem;
+header {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid blue;
+    margin: 0 4rem;
+    word-break: keep-all;
+
+    & h1{
+        font-weight: normal;
+        font-size:3rem;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+        text-shadow: 0.4rem 0.35rem #898776;
+        margin: 0;
+    }
 }
 
-.primary-navigation a:not(:last-child){
-    margin-right: 2.2rem;
+main {
+    display: flex;
+    flex-direction: row;
 }
 
-.primary-navigation::before{
-    content: "";
-    position: absolute;
-    height: 3rem;
-    width: 0.7rem;
-    margin: 1rem 0 0 -1.2rem;
-    border: solid #A7A187;
-    border-width: 0 0.4rem 0 1rem;
-}
+.primary-navigation {
+    display: flex;
+    flex-direction: row;
+    border: solid green;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+    
+    & ul{
+        display: flex;
+        gap: 2rem;
+    }
 
+    & a{
+        box-sizing: border-box;
+        border: solid black;
+    }
+
+}
 
 .lace-pattern{
     display: block;
-    border-top: solid #46433A 0.2rem;   
+    border-top: solid #46433A 0.2rem;     
+    
 }
 
 .lace-pattern::after{
     content: "";
-    display:inherit;
+    display: inherit;
     height: 2.3rem;
+    max-width: 90rem;
     background: url(lace.svg) repeat-x left top / 75px 30px, linear-gradient(to right, #46433A 12px, transparent 10px, transparent 40px) repeat-x left top / 75px 3px;
-    margin: 0 2.5rem 0 4rem;
-    
+    margin-left: 4rem;
+    border: solid lightblue;
 }
 
-header {
-    margin: 0 0 0 4rem;
+.content-card{
+    box-sizing: border-box;
+    border: solid lightseagreen;
+    margin: 2rem;
 }
 
-header h1{
-    display: inline-block;
-    font-weight: normal;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    text-shadow: 0.4rem 0.35rem #898776;
-    font-size:3rem;
-    margin:0;
-}
+
 
 
 
